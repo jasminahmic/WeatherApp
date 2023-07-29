@@ -1,0 +1,20 @@
+// Color palette for dark theme 
+$dark-background-color: #222831;
+$dark-font-color: #EEEEEE;
+$dark-primary-color: #00ADB5;
+$dark-secondary-color: #393E46;
+
+// Color palette for light theme
+
+$light-background-color: #E3FDFD;
+$light-font-color: #71C9CE;
+$light-primary-color: #A6E3E9;
+$light-secondary-color: #CBF1F5;
+
+// Gradient color
+
+$gradient-navy: #120078;
+$gradient-purple: #9D0191;
+$gradient-pink: #FD3A69;
+$gradient-yellow: #FECD1A;
+$linear-gradient: linear-gradient(45deg, $gradient-navy, $gradient-purple, $gradient-pink, $gradient-yellow);

@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="10">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/global.css">
     <script src="https://kit.fontawesome.com/b686ac269d.js" crossorigin="anonymous"></script>
     <title>WeatherApp</title>
-</head>
-<body>
-    <h1 class="datetime">datetime</h1> 
-    <div class="card">
+  </head>
+  <body>
+    <div class="switch">
+      <input type="checkbox" id="switch-checkbox" class="switch-checkbox">
+      <label for="switch-checkbox" class="switch-label"></label>
+    </div>
+    <div class="wrap">
+      <div class="card">
         <div class="search">
-            <input type="text" placeholder="Search" class="search-bar">
-            <button class="search-icon">
-                <i class="fas fa-search"></i>
-            </button>
+          <label for="search-input" class="label-search">Search city:</label>
+          <input type="text" placeholder="Search city...">
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
         </div>
         <div class="weather">
-            <div class="data1">
-                <h1 class="city">city</h1>
-                <div class="temperature">temp</div>
-                <div class="precipitation">precipitation</div>
-                <div class="humidity">humidity</div>
-                <div class="wind">wind</div>
-            </div>
-            <div class="data2">
-                <img src="" alt="" class="weather-icon"/>
-                <h5 class="description">desc</h5>
-            </div>
+          <div>
+            <h1 class="city"></h1>
+            <h3 class="temperature"></h3>
+            <p class="precipitation"></p>
+            <p class="humidity"></p>
+            <p class="wind"></p>
+          </div>
+          <div>
+            <img src="" alt="" class="weather-icon"/>
+            <h5 class="description"></h5>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <script src="./resources/js/index.js"></script>
+  </body>
 </html>
