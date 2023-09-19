@@ -1,3 +1,4 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './colors.scss';
 @import './typography.scss';
 @import './forms.scss';
@@ -7,48 +8,82 @@
 }
 
 body {
-    height: calc(100vh - 24px);
+    height: 100vh;
     width: 100%;
-
     margin: 0;
     padding: 0;
-
-    background: $light-background-color;
 }
 
-.wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100% - 54px);
+body.light {
+    background: $light-background-color;
+
+    .card {
+        border: 1px solid $light-primary-color;
+    }
+}
+
+body.dark {
+    background: $dark-background-color;
+
+    .card {
+        border: 1px solid $dark-primary-color;
+    }
 }
 
 .card {
   display: block;
-  width: 512px;
-  height: auto;
-
-  margin: 0 24px;
+  margin: 0 0 16px;
   padding: 48px;
-  border: 1px solid $light-primary-color;
   border-radius: 16px;
-}
 
-.search {
-    margin-bottom: 24px;
+  @media screen and (max-width: 720px) {
+    padding: 24px;
+  }
 }
 
 .weather {
-    display: flex;
+    display: none;
     align-items: flex-end;
+    justify-content: space-between;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.data-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
-.city,
-.temperature {
-    display: inline-block;
+.search {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @media screen and (max-width:720px) {
+        gap: 12px;
+    }
+    
+    .button-search {
+        min-width: 48px;
+    }
+
+    label {
+        display: none;
+    }
 }
 
-.city {
-    margin-right: 16px;
+.description, 
+.text-center {
+    text-align: center;
+}
+
+.dateTime {
+    margin: 24px 0;
+    font-size: 24px;
+    line-height: 30px;
 }

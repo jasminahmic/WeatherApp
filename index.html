@@ -11,35 +11,47 @@
     <script src="https://kit.fontawesome.com/b686ac269d.js" crossorigin="anonymous"></script>
     <title>WeatherApp</title>
   </head>
-  <body>
-    <div class="switch">
-      <input type="checkbox" id="switch-checkbox" class="switch-checkbox">
-      <label for="switch-checkbox" class="switch-label"></label>
-    </div>
-    <div class="wrap">
-      <div class="card">
-        <div class="search">
-          <label for="search-input" class="label-search">Search city:</label>
-          <input type="text" placeholder="Search city...">
-          <button>
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-        <div class="weather">
-          <div>
-            <h1 class="city"></h1>
-            <h3 class="temperature"></h3>
-            <p class="precipitation"></p>
-            <p class="humidity"></p>
-            <p class="wind"></p>
+  <body class="light">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="switch">
+            <input type="checkbox" id="switch-checkbox" class="switch-checkbox">
+            <label for="switch-checkbox" class="switch-label"></label>
           </div>
-          <div>
-            <img src="" alt="" class="weather-icon"/>
-            <h5 class="description"></h5>
+        </div>
+        <div class="col-9 d-flex align-items-center justify-content-end">
+          <h1 class="dateTime"></h1>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center" style="height: calc(100vh - 78px);">
+        <div class="col-lg-8 col-md-10 col-12">
+          <div class="card">
+            <h4 class="text-center">WeatherApp</h4>
+            <div class="search">
+              <label for="search-input" class="label-search">Search city:</label>
+              <input type="text" placeholder="Search city..." id="search-input" class="input-search">
+              <button class="button-search">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="weather">
+              <div class="data-left">
+                <h2 class="city"></h2>
+                <h4 class="temperature"></h4>
+                <p class="pressure"></p>
+                <p class="humidity"></p>
+                <p class="wind"></p>
+              </div>
+              <div class="data-right">
+                <img src="" alt="" class="weather-icon"/>
+                <h5 class="description"></h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="./resources/js/index.js"></script>
+    <script type="module" src="./resources/js/index.js" defer></script>
   </body>
 </html>
